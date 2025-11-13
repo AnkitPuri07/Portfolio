@@ -4,8 +4,8 @@ import ankitPortfolio from "../../assets/ankit2-portfolio.jpg";
 function Home() {
   return (
     <>
-      <div className='p-6 md:p-12 lg:p-20 bg-slate-500'>
-        <div className='flex flex-col md:flex-row bg-slate-600 rounded-xl overflow-hidden shadow-xl'>
+      <div className='p-6 md:p-12 lg:p-20 bg-gradient-to-r from-gray-950 to-violet-950 '>
+        <div className='flex flex-col md:flex-row bg-slate-800 rounded-xl overflow-hidden shadow-xl shadow-yellow-300'>
              <div className="flex justify-center items-center w-full md:w-1/2 py-8 px-6 md:px-12">
             <div className="w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden shadow-2xl border-4 border-blue-400 hover:scale-105 transition-transform duration-500 ease-in-out">
               <img

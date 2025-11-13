@@ -2,13 +2,13 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer className="bg-slate-800 text-white py-6 border-t border-gray-200 ">
+    <footer className="bg-[#141426] text-[#EAEAEA] py-6 border-t border-[#FF6B00]/40 ">
       <div className="max-w-6xl mx-auto px-4 text-center">
         <h2 className="text-lg font-semibold mb-2">
           Designed & Built by{" "}
-          <span className="text-blue-600 font-bold">Ankit Puri</span>
+          <span className="text-[#FF6B00] font-bold">Ankit Puri</span>
         </h2>
-        <p className="text-sm text-gray-200">
+        <p className="text-sm text-[#FFD93D]">
           © {new Date().getFullYear()} Ankit Puri. All rights reserved.
         </p>
 

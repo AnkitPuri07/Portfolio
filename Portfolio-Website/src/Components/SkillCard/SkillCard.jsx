@@ -5,11 +5,11 @@ function SkillCard({ Name, img, proficiency }) {
   const proficiencyWidth = `${proficiency}%`;
 
   return (
-    <div className="w-full max-w-xs p-4 mx-auto bg-slate-300 rounded-xl shadow-2xl overflow-hidden 
-                    transform hover:scale-[1.02] transition-transform duration-300 ">
+    <div className="w-56 sm:w-56 md:w-64 lg:w-72 bg-slate-300 rounded-xl shadow-2xl overflow-hidden 
+                    transform hover:scale-[1.02] transition-transform duration-300 shadow-xl shadow-indigo-500/50 ring-4 ring-indigo-200/50 hover:shadow-2xl hover:shadow-indigo-500/70 transition-all duration-500">
       
       {/* 1. Skill Image Section (Container for the image) */}
-      <div className="w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 lg:w-72 
+      <div className="w-full h-40  sm:h-56  md:h-64  
       lg:h-72 rounded-xl overflow-hidden shadow-2xl hover:scale-105
        transition-transform duration-500 ease-in-out">
         {/* Image tag with object-cover to fill the space */}
@@ -24,7 +24,7 @@ function SkillCard({ Name, img, proficiency }) {
       </div>
 
       {/* 2. Content Section */}
-      <div className="space-y-3">
+      <div className="space-y-1">
         {/* Name and Proficiency Percentage */}
         <div className="flex justify-between items-baseline">
           <h3 className="text-xl font-extrabold text-gray-800">{Name}</h3>

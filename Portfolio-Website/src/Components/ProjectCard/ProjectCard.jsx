@@ -4,12 +4,15 @@ import {Link} from 'react-router-dom'
 function ProjectCard({name,description,img}) {
   return (
     <>
-    <div className="relative bg-slate-300  p-8 w-full sm:w-[45%] md:w-[30%] lg:w-1/4 h-[380px] rounded-xl overflow-hidden cursor-pointer border-2
-     border-blue-700 shadow-md group transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]">
+    <div className="relative p-3 hover:p-1 w-56 sm:w-56 md:w-64 lg:w-72 sm:h-56  md:h-64  
+      lg:h-72 bg-slate-300  
+                    rounded-xl overflow-hidden cursor-pointer border-2
+     border-blue-700 shadow-md group transition-all duration-500 hover:shadow-2xl hover:scale-[1.02]
+     shadow-xl shadow-[0_0_25px_3px_rgba(164,69,255,0.35)  hover:shadow-2xl hover:shadow-indigo-500/70 transition-all duration-500">
 
   {/* Project Image */}
   <img
-    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 rounded-xl transition-opacity duration-500"
+    className="w-full h-full object-cover opacity-90 group-hover:opacity-100 rounded-xl transition-opacity duration-500"
     src={img}
     alt="ProjectImg"
   />
