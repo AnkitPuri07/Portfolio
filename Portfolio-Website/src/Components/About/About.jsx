@@ -3,7 +3,7 @@ import aboutPhoto from '../../assets/Ankit-portfolio.jpg'
 
 function About() {
   return (
-    <section className="flex flex-col md:flex-row items-center justify-center gap-10 py-16 px-6 bg-gradient-to-r from-gray-950 to-violet-950">
+    <section id='about' className="flex flex-col md:flex-row items-center justify-center gap-10 py-16 px-6 bg-gradient-to-r from-gray-950 to-violet-950">
   {/* Image */}
   <div className="md:w-1/2 flex justify-center  ">
     <img

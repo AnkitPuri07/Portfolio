@@ -13,7 +13,8 @@ function Projects() {
     ]
  return (
     <>
-    <div className='text-center  mt-10 mb-6 bg-gradient-to-r from-gray-950 to-violet-950'><h2 className='text-4xl font-extrabold text-[#FF6B00] 
+    <div id="projects" className='mb-10'></div>
+    <div className='text-center  mt-10 mb-10 bg-gradient-to-r from-gray-950 to-violet-950'><h2 className='text-4xl font-extrabold text-[#FF6B00] 
                drop-shadow-[0_0_15px_rgba(255,107,0,0.6)]'>My Projects</h2></div>
 
     <div className='bg-gradient-to-r from-gray-950 to-violet-950 flex flex-wrap gap-3 justify-evenly mb-30'>

@@ -5,6 +5,8 @@ import TailwindImage from '../../assets/Tailwind.jpg'
 import NPMImage from '../../assets/NPM.jpg'
 import gitImage from '../../assets/git.jpg'
 import VsImage from '../../assets/VS.jpg'
+import Node from '../../assets/Node-js.jpg'
+import Next from '../../assets/Next-js.jpg'
 
 const skillsInformation = [
   // --- FRONT END SKILLS ---
@@ -63,14 +65,14 @@ const skillsInformation = [
     id: 8,
     Name: 'Next.js',
     Proficiency: 50,
-    img: ReactImage, // Replace with your actual image variable
+    img: Next, // Replace with your actual image variable
     SkillType: 'others'
   },
   {
     id: 9,
     Name: 'Node.js',
     Proficiency: 60,
-    img: ReactImage, // Replace with your actual image variable
+    img: Node, // Replace with your actual image variable
     SkillType: 'others'
   }
 ];

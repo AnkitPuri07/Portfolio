@@ -110,7 +110,7 @@ function Contact() {
             <FaGithub />
           </a>
           <a
-            href="https://linkedin.com/in/yourlinkedin"
+            href="https://www.linkedin.com/in/ankit-puri-838899321"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-[#FFD93D] transition-all duration-300"
@@ -118,7 +118,7 @@ function Contact() {
             <FaLinkedin />
           </a>
           <a
-            href="https://instagram.com/yourinstagram"
+            href="https://www.instagram.com/ankit_ho_k?igsh=dnB1Z2ZvYmE1ZjRv"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-[#FF6B00] transition-all duration-300"
@@ -126,7 +126,7 @@ function Contact() {
             <FaInstagram />
           </a>
           <a
-            href="https://facebook.com/yourfacebook"
+            href="https://www.facebook.com/share/16Z4TYevdV/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-[#FFD93D] transition-all duration-300"
@@ -135,14 +135,17 @@ function Contact() {
           </a>
         </div>
 
-        <button
-          onClick={() => window.open("/your_resume.pdf", "_blank")}
-          className="mt-4 py-2 px-6 bg-gradient-to-r from-[#FF6B00] to-[#FFD93D] 
-                     text-[#1B1B2A] font-semibold rounded-lg hover:scale-[1.05] 
-                     transition-all duration-300 shadow-lg"
-        >
-          Download Resume
-        </button>
+        <a
+                            href="/your_resume.pdf"
+                            download="Your_Name_Resume.pdf" 
+                            className="py-3 px-8 bg-white text-indigo-600 font-bold rounded-lg 
+                                       shadow-2xl shadow-white/50 
+                                       hover:bg-gray-100 transition duration-300 
+                                       focus:outline-none focus:ring-4 focus:ring-white 
+                                       transform hover:scale-[1.05] active:scale-[0.98] mt-2"
+                        >
+                            Download Resume
+                        </a>
       </div>
     </section>
   );
