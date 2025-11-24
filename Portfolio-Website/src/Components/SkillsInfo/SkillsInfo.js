@@ -13,14 +13,14 @@ const skillsInformation = [
   {
     id: 1,
     Name: 'React',
-    Proficiency: 75,
+    Proficiency: 60,
     img: ReactImage, 
     SkillType: 'frontend'
   },
   {
     id: 2,
     Name: 'JavaScript',
-    Proficiency: 80,
+    Proficiency: 75,
     img: JavascriptImage, // Replace with your 'JavascriptImage' variable
     SkillType: 'frontend'
   },
@@ -34,7 +34,7 @@ const skillsInformation = [
   {
     id: 4,
     Name: 'Tailwind CSS',
-    Proficiency: 75,
+    Proficiency: 80,
     img: TailwindImage, // Replace with your 'TailwindImage' variable
     SkillType: 'frontend'
   },
@@ -49,7 +49,7 @@ const skillsInformation = [
   {
     id: 6,
     Name: 'VS Code',
-    Proficiency: 95,
+    Proficiency: 75,
     img: VsImage, // Replace with your 'VsImage' variable
     SkillType: 'tools'
   },
@@ -64,14 +64,14 @@ const skillsInformation = [
   {
     id: 8,
     Name: 'Next.js',
-    Proficiency: 50,
+    Proficiency: 30,
     img: Next, // Replace with your actual image variable
     SkillType: 'others'
   },
   {
     id: 9,
     Name: 'Node.js',
-    Proficiency: 60,
+    Proficiency: 40,
     img: Node, // Replace with your actual image variable
     SkillType: 'others'
   }

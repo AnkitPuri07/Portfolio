@@ -1,14 +1,17 @@
 import React from 'react'
 import ProjectCard from "../ProjectCard/ProjectCard"
-import MunicipalSS from '../../assets/Javascript.jpg'
-import MovieFinderSS from '../../assets/React.jpg'
+import MunicipalSS from '../../assets/Municipal.png'
+import MovieFinderSS from '../../assets/MovieFinder.png'
 import PortfolioSS from '../../assets/HTML.jpg'
+
 
 function Projects() {
 
     const ProjectsInfo=[
-        {id:"1", name : "Municipal", img : MunicipalSS , description: "Modern, community-focused platform improving local government interaction"},
-        {id:"2", name : "MovieFinder", img : MovieFinderSS , description: "Showcasing development skills, projects, and professional digital presence"},
+        {id:"1", name : "Municipal-Website", img : MunicipalSS ,source: "https://municipal-website-ankit.vercel.app/",
+           description: "Modern, community-focused platform improving local government interaction"},
+        {id:"2", name : "MovieFinder", img : MovieFinderSS ,source: "https://movie-finder-ankit.vercel.app/",
+           description: "Showcasing development skills, projects, and professional digital presence"},
         {id:"3", name : "Portfolio", img : PortfolioSS , description: "interactive search tool for movies, complete with detailed info and ratings"},
     ]
  return (
@@ -22,6 +25,7 @@ function Projects() {
       key={index}
       name={e.name}
       img={e.img}
+      source={e.source}
       description={e.description}
       />))}
     </div>
