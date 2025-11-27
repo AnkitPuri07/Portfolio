@@ -5,7 +5,7 @@ import TailwindImage from '../../assets/Tailwind.jpg'
 import NPMImage from '../../assets/NPM.jpg'
 import gitImage from '../../assets/git.jpg'
 import VsImage from '../../assets/VS.jpg'
-import Node from '../../assets/Node-js.jpg'
+import Node from '../../assets/node-js.jpg'
 import Next from '../../assets/Next-js.jpg'
 
 const skillsInformation = [
