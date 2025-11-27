@@ -1,4 +1,4 @@
-import JavascriptImage from '../../assets/Javascript.jpg'
+import JavascriptImage from '../../assets/JavaScript.jpg'
 import ReactImage from '../../assets/React.jpg'
 import HTMLImage from '../../assets/HTML.jpg'
 import TailwindImage from '../../assets/Tailwind.jpg'
