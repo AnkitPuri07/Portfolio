@@ -10,10 +10,10 @@ function Contact() {
 
     emailjs
       .sendForm(
-        "service_j851vjj", // replace with your EmailJS Service ID
-        "template_e8wqmkr", // replace with your Template ID
-        form.current,
-        "UrqsOMQEbDMJY5DPe"  // replace with your Public Key
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      form.current,
+      import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         (result) => {
