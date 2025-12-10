@@ -12,7 +12,7 @@ function Projects() {
            description: "Modern, community-focused platform improving local government interaction"},
         {id:"2", name : "MovieFinder", img : MovieFinderSS ,source: "https://movie-finder-ankit.vercel.app/",
            description: "Showcasing development skills, projects, and professional digital presence"},
-        {id:"3", name : "Portfolio", img : PortfolioSS , description: "interactive search tool for movies, complete with detailed info and ratings"},
+        {id:"3", name : "BookVerse", img : PortfolioSS , description: "Sorry I am working on this it is not clickable"},
     ]
  return (
     <>

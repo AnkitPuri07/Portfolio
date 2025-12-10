@@ -136,8 +136,8 @@ function Contact() {
         </div>
 
         <a
-                            href="/your_resume.pdf"
-                            download="Your_Name_Resume.pdf" 
+                            href="/Resume-ankit.pdf"
+                            download="Resume-ankit.pdf" 
                             className="py-3 px-8 bg-white text-indigo-600 font-bold rounded-lg 
                                        shadow-2xl shadow-white/50 
                                        hover:bg-gray-100 transition duration-300 
