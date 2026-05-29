@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+section {
+  transition: opacity 0.3s ease;
+}

@@ -1,31 +1,30 @@
-import { useState } from 'react'
-import Navbar from '../src/Components/Navbar/Navbar'
-import Footer from '../src/Components/Foooter/Footer'
-import Home from '../src/Components/Home/Home'
-import About from '../src/Components/About/About'
-import Skills from '../src/Components/Skills/Skills'
-import Projects from '../src/Components/Projects/Projects'
-import Contact from '../src/Components/Contact/Contact'
-import Education from '../src/Components/Education/Education'
+import { ThemeProvider } from './context/ThemeContext';
+import Navbar from './Components/Navbar/Navbar';
+import Footer from './Components/Foooter/Footer';
+import Home from './Components/Home/Home';
+import About from './Components/About/About';
+import Skills from './Components/Skills/Skills';
+import Projects from './Components/Projects/Projects';
+import Contact from './Components/Contact/Contact';
+import Education from './Components/Education/Education';
+
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-   <>
-   <div className= 'bg-gradient-to-r from-gray-950 to-violet-950'>
-
-     <Navbar></Navbar>
-     <Home></Home>
-     <About/>
-     <Skills/>
-     <Education></Education>
-     <Projects/>
-     <Contact/>
-     <Footer></Footer>
-   </div>
-    
-   </>
-  )
+    <ThemeProvider>
+      <div className="min-h-screen">
+        <Navbar />
+        <main>
+          <Home />
+          <About />
+          <Skills />
+          <Projects />
+          <Education />
+          <Contact />
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;

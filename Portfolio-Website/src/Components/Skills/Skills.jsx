@@ -1,67 +1,78 @@
 import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import skillsInformation from '../SkillsInfo/SkillsInfo.js';
 import SkillCard from '../SkillCard/SkillCard.jsx';
 
 function Skills() {
   const [selectedType, setSelectedType] = useState("frontend");
 
+  const categories = [
+    { id: "frontend", label: "Frontend" },
+    { id: "tools", label: "Tools" },
+    { id: "others", label: "Others" },
+  ];
+
   const filteredSkills = skillsInformation.filter(
-    (skill) => skill.SkillType === selectedType 
+    (skill) => skill.SkillType === selectedType
   );
 
-  const getButtonClass = (type) =>
-    `text-xl font-semibold mx-4 py-2 px-4 rounded-md transition-all duration-300 ease-in-out
-     hover:scale-[1.05] active:scale-[0.98] ${
-       selectedType === type
-         ? "bg-yellow-400 text-black shadow-md shadow-yellow-400/60"
-         : "text-[#EAEAEA] hover:text-yellow-400"
-     }`;
-
   return (
-    <>
-    <div id="skills" className='mb-10'></div>
-    <section id="skills">
-      <div  className="text-center bg-gradient-to-r from-gray-950 to-violet-950"><h2 className='text-4xl font-extrabold text-[#FF6B00] 
-               drop-shadow-[0_0_15px_rgba(255,107,0,0.6)] mt-20 mb-10'>SKILLS</h2></div>
-
-      {/* Buttons */}
-      <div className="flex justify-center items-center w-full p-4 bg-gradient-to-r from-gray-950 to-violet-950 shadow-md ">
-        <button
-          className={getButtonClass("frontend")}
-          onClick={() => setSelectedType("frontend")}
+    <section id="skills" className="py-24 px-4 md:px-8 bg-grid">
+      <div className="max-w-6xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
         >
-          FrontEnd
-        </button>
+          <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">Skills</h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)] mx-auto rounded-full mb-8" />
 
-        <button
-          className={getButtonClass("tools")}
-          onClick={() => setSelectedType("tools")}
-        >
-          Tools
-        </button>
+          <div className="flex justify-center gap-4 flex-wrap">
+            {categories.map((category) => (
+              <motion.button
+                key={category.id}
+                onClick={() => setSelectedType(category.id)}
+                className={`px-6 py-2.5 rounded-xl font-semibold transition-all duration-300 ${
+                  selectedType === category.id
+                    ? "bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)] text-white shadow-lg shadow-[var(--accent-primary)]/30"
+                    : "glass text-[var(--text-secondary)] hover:text-[var(--accent-primary)]"
+                }`}
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                {category.label}
+              </motion.button>
+            ))}
+          </div>
+        </motion.div>
 
-        <button
-         className={getButtonClass("others")}
-          onClick={() => setSelectedType("others")}
+        <motion.div
+          layout
+          className="flex flex-wrap justify-center gap-6"
         >
-          Others
-        </button>
+          <AnimatePresence mode="popLayout">
+            {filteredSkills.map((skill, index) => (
+              <motion.div
+                key={skill.id}
+                layout
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.8 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+              >
+                <SkillCard
+                  Name={skill.Name}
+                  proficiency={skill.Proficiency}
+                  img={skill.img}
+                />
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </motion.div>
       </div>
-
-      {/* Skill Cards */}
-      <div className="flex flex-wrap justify-evenly bg-gradient-to-r from-gray-950 to-violet-950 gap-4 mb-4">
-        {filteredSkills.map((skill, index) => (
-          <SkillCard
-            key={index}
-            Name={skill.Name}
-            proficiency={skill.Proficiency}
-            img={skill.img}
-          />
-        ))}
-      </div>
-      </section>
-      </>
-    
+    </section>
   );
 }
 

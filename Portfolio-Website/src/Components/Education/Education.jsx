@@ -1,55 +1,83 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { GraduationCap, Award, Calendar } from "lucide-react";
 
 function Education() {
+  const educationData = [
+    {
+      degree: "BCA",
+      institution: "Tribhuvan University (TIC)",
+      year: "Currently Studying (1st Sem)",
+      gpa: "3.55",
+      icon: GraduationCap,
+    },
+    {
+      degree: "SLC",
+      institution: "Texas International College",
+      year: "2081",
+      gpa: "3.70",
+      icon: Award,
+    },
+    {
+      degree: "SEE",
+      institution: "Kamlamai SEBS",
+      year: "2079",
+      gpa: "3.75",
+      icon: GraduationCap,
+    },
+  ];
+
   return (
-    <section
-      id="education"
-      className="min-h-screen bg-gradient-to-r from-gray-950 to-violet-950 text-gray-200 flex flex-col  justify-center items-center py-16 px-4"
-    >
-      {/* 🔥 Section Heading */}
-      <h2 className="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text 
-                     bg-gradient-to-r from-[#FF6B00] to-[#FFD93D] mb-12 tracking-wide text-center">
-        EDUCATION
-      </h2>
+    <section id="education" className="py-24 px-4 md:px-8 bg-grid">
+      <div className="max-w-5xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold gradient-text mb-4">Education</h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-[var(--accent-primary)] to-[var(--accent-secondary)] mx-auto rounded-full mb-4" />
+          <p className="text-[var(--text-muted)]">My academic journey and achievements</p>
+        </motion.div>
 
-    
-      <div className="w-full shadow-gray-500 max-w-4xl overflow-x-auto bg-gradient-to-r from-gray-950 to-violet-950 backdrop-blur-md rounded-2xl shadow-2xl border border-[#2E2E44]">
-        <table className="min-w-full text-left border-collapse">
-          <thead>
-            <tr className="bg-gradient-to-r from-[#FF6B00]/30 to-[#FFD93D]/30 text-[#FFD93D]">
-              <th className="py-4 px-6 text-lg font-semibold">Degree</th>
-              <th className="py-4 px-6 text-lg font-semibold">Institute</th>
-              <th className="py-4 px-6 text-lg font-semibold">Passed Year</th>
-              <th className="py-4 px-6 text-lg font-semibold">GPA</th>
-            </tr>
-          </thead>
+        <div className="space-y-6">
+          {educationData.map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ scale: 1.02 }}
+              className="glass rounded-2xl p-6 card-hover"
+            >
+              <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+                <div className="flex-shrink-0">
+                  <div className="p-4 rounded-xl bg-gradient-to-br from-[var(--accent-primary)] to-[var(--accent-secondary)]">
+                    <item.icon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
 
-          <tbody>
-          
-            <tr className="hover:bg-[#2B2B3F] transition-all duration-200">
-              <td className="py-4 px-6">SEE</td>
-              <td className="py-4 px-6">Kamlamai SEBS</td>
-              <td className="py-4 px-6">2079</td>
-              <td className="py-4 px-6 text-[#FFD93D] font-semibold">3.75</td>
-            </tr>
-
-           
-            <tr className="hover:bg-[#2B2B3F] transition-all duration-200">
-              <td className="py-4 px-6">SLC</td>
-              <td className="py-4 px-6">Texas International College</td>
-              <td className="py-4 px-6">2081</td>
-              <td className="py-4 px-6 text-[#FFD93D] font-semibold">3.70</td>
-            </tr>
-
-        
-            <tr className="hover:bg-[#2B2B3F] transition-all duration-200">
-              <td className="py-4 px-6">BCA</td>
-              <td className="py-4 px-6">Tribhuvan University (TIC)</td>
-              <td className="py-4 px-6">Currently Studying (1st Sem)</td>
-              <td className="py-4 px-6 text-[#FFD93D] font-semibold">3.55</td>
-            </tr>
-          </tbody>
-        </table>
+                <div className="flex-1 min-w-0">
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 mb-2">
+                    <h3 className="text-xl font-bold text-[var(--text-primary)]">{item.degree}</h3>
+                    <div className="flex items-center gap-2 text-[var(--accent-primary)] font-semibold">
+                      <Award className="w-4 h-4" />
+                      <span>GPA: {item.gpa}</span>
+                    </div>
+                  </div>
+                  <p className="text-[var(--text-secondary)] mb-2">{item.institution}</p>
+                  <div className="flex items-center gap-2 text-[var(--text-muted)] text-sm">
+                    <Calendar className="w-4 h-4" />
+                    <span>{item.year}</span>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
